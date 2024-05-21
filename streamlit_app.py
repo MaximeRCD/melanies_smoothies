@@ -47,3 +47,9 @@ if ingredients_list:
         st.success('Your Smoothie is ordered!', icon="✅")
 
 # st.dataframe(data=my_dataframe, use_container_width=True)
+
+
+# New section to display Fruitvice nutrition informations
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+st.text(fruityvice_response)
